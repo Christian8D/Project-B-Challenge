@@ -37,7 +37,7 @@
   - [GraphQL Endpoints](#graphql-endpoints)
 - [Queue Management](#queue-management)
 - [Event Emitter Flow](#event-emitter-flow)
-- [Notes & Customization](#notes--customization)
+- [Challenges and Observations](#challenges-and-observations)
 
 ## Project setup
 
@@ -324,6 +324,8 @@ mutation {
 This loosely coupled architecture means you can easily attach additional functionality whenever an employee is created—simply add new event listeners.
 </p>
 
+## Challenges and Observations
 
+blabla
 
 
