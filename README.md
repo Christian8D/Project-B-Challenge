@@ -201,7 +201,7 @@ Log messages will appear in your console as you use the API.
 ```
 <br>
 **Get an Employee by ID**
-<li>Endpoint: GET /api/employees/:id</li>
+<li>Endpoint: GET /api/employees/:id :accessibility:</li>
 <li>Example:</li>
 
 
@@ -219,8 +219,18 @@ curl http://localhost:3000/api/employees
 
 ```
 
+<br>
+**Update an Employees**
+<li>Endpoint: GET /api/employees/:id :accessibility:</li>
+<li>Body: Partial fields you want to update. For example:</li>
 
+```bash
+{
+  "jobTitle": "Senior Software Engineer",
+  "department": "Engineering"
+}
 
+```
 
 
 
