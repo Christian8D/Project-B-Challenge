@@ -24,6 +24,7 @@ export class MailModule implements OnModuleInit {
   onModuleInit(){
     // Log when any job is completed
     this.mailQueue.on('completed', (job, result) => {
+      // console.log(`[MailQueue] Job #${job.id} completed. Result: ${result}`,);
       console.log(`[MailQueue] Job #${job.id} completed. Result: ${JSON.stringify(result)}`,);
     });
 

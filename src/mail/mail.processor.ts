@@ -43,5 +43,10 @@ export class MailProcessor {
         throw error;
     }
 
+    return{
+      success: true, 
+      message: `Email sent successfully to ${employee.email}`,
+    }
+
  }
 }
