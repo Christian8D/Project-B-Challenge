@@ -8,6 +8,8 @@ export class LoggerMiddleware implements NestMiddleware {
   private logger = new Logger('HTTP');
 
   use(req: Request, res: Response, next: NextFunction) {
+
+    //TODO: Log request details debugger
     // this.logger.log(
 
     //   `${req.method} ${req.originalUrl} - Headers: ${JSON.stringify(req.headers)} ${JSON.stringify(req.body)}`,

@@ -12,8 +12,7 @@ export class MailProcessor {
 
     console.log(`[MailProcessor] Processing job #${job.id} for ${employee.name}`);
 
-    // Simulate "sending" the email
-    console.log(`[MailProcessor] Simulating email send to ${employee.name}...`);
+    //TODO: Implement email sending logic here
 
     // SMTP configuration for nodemailer
     // const transporter = nodemailer.createTransport({
@@ -26,15 +25,18 @@ export class MailProcessor {
     //     },
     //   });
 
-    // const mailOptions = {
-    //     from: '"HR Dept" <hr@example.com>',
-    //     to: `some_test_email@domain.com`,
-    //     subject: 'Welcome to the Company',
-    //     text: `Hello ${employee.name}, welcome to our company!`,
-    //   };
+    const mailOptions = {
+        from: '"HR Dept" <hr@example.com>',
+        to: `${employee.email}`,
+        subject: 'Welcome to the Company',
+        text: `Hello ${employee.name}, welcome to project b! Are you ready to unf*ck payroll?`,
+      };
+
+      console.log(`[MailProcessor] After simulation Data Sent: ${JSON.stringify(mailOptions)}...`);
+     
 
       try {
-        // await transporter.sendMail(mailOptions);
+        //TODO: - email logic: await transporter.sendMail(mailOptions);
         console.log(
           `[MailProcessor] Email (job #${job.id}) "sent" successfully to ${employee.name}`,
         );
