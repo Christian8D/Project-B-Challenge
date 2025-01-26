@@ -29,12 +29,12 @@
 ## 📚 Table of Contents
 
 - 📄 [Overview](#overview)
-- 📂 [Project Structure](#project-structure)
 - ⚙️ [Installation & Setup](#installation--setup)
 - 🚀 [Running the Application](#running-the-application)
 - 🌐 [Endpoints & Usage](#endpoints--usage)
   - 🔗 [REST Endpoints](#rest-endpoints)
   - 📜 [GraphQL Endpoints](#graphql-endpoints)
+- 📂 [Project Structure](#project-structure)
 - 📦 [Queue Management](#queue-management)
 - 🔔 [Event Emitter Flow](#event-emitter-flow)
 - 💡 [Challenges and Observations](#challenges-and-observations)
