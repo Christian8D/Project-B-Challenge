@@ -1,5 +1,7 @@
-<div style="text-align: center;">
-  <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="NestJS Logo" />
+
+<div align="center"style="text-align: center;">
+  <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="NestJS Logo"  style="display: block; margin: 0 auto;"  />
+  <img src="https://prod-api.symphony.is/assets/og-image-5.webp" width="220" alt="NestJS Logo"  style="display: block; margin: 0 auto;"  />
 </div>
 
 <p align="center">
@@ -17,8 +19,9 @@
 1.- Employee Module – CRUD operations on employees (REST & GraphQL)<br>
 2.- Email Service – Simulated email functionality using Bull for queueing jobs<br>
 3.- Queues & Asynchronous Processing – Usage of Bull for background processing, plus Bull Board for queue monitoring<br>
-4.- Event Emitter – Loose coupling of services to handle side effects when employees are created/deleted<br>
+4.- Event Emitter – Loose coupling of services to handle side effects<br>
 5.- GraphQL Playground – Built-in interactive explorer for GraphQL queries<br>
+5.- Bull Board – Built-in interactive explorer for Bull Queues<br>
 
 <br>
 ##Table of Contents
