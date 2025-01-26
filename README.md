@@ -172,7 +172,7 @@ Log messages will appear in your console as you use the API.
 
 
 ## Endpoints & Usage
-**GrapQL:**
+## REST Endpoints
 <p>Global REST prefix is set to api, so endpoints are under <code>http://localhost:3000/api</code> </p>
 
 <ul>
