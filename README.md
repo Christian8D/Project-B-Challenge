@@ -70,7 +70,7 @@ docker run -d --name my-redis -p 6379:6379 redis
 **4.- (Optional) Configure environment variables:**
 The default bull.config.ts points to localhost:6379. If needed, adjust Redis configurations there or via environment variables.
 
-## Project setup
+## Start Project
 
 ```bash
 # development
