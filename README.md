@@ -25,31 +25,19 @@
 
 <br>
 
-##Table of Contents
+
+## Table of Contents
 
 - [Overview](#overview)
-
 - [Project Structure](#project-structure)
-
-<br>
-- Installation & Setup
-<br>
-- Running the Application
-<br>
-- Endpoints & Usage:
-<li>
-   REST Endpoints
-</li>
-
-<li>
-   GraphQL Endpoints
-</li>
-<br>
-- Queue Management
-<br>
-- Event Emitter Flow
-<br>
-- Notes & Customization
+- [Installation & Setup](#installation--setup)
+- [Running the Application](#running-the-application)
+- [Endpoints & Usage](#endpoints--usage)
+  - [REST Endpoints](#rest-endpoints)
+  - [GraphQL Endpoints](#graphql-endpoints)
+- [Queue Management](#queue-management)
+- [Event Emitter Flow](#event-emitter-flow)
+- [Notes & Customization](#notes--customization)
 
 ## Project setup
 
