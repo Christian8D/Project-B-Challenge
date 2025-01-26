@@ -102,7 +102,8 @@ Redis – Required by Bull for storing and retrieving job data
 
 <br>
 
-##
+##Project Structure
+**A brief overview of the most important directories/files:**
 
 ```bash
 .
