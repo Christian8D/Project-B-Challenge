@@ -30,7 +30,6 @@
 
 - 📄 [Overview](#overview)
 - ⚙️ [Installation & Setup](#installation--setup)
-- 🚀 [Running the Application](#running-the-application)
 - 🌐 [Endpoints & Usage](#endpoints--usage)
   - 🔗 [REST Endpoints](#rest-endpoints)
   - 📜 [GraphQL Endpoints](#graphql-endpoints)
