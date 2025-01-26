@@ -1,4 +1,4 @@
-'
+
 <div align="center"style="text-align: center;">
   <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="NestJS Logo"  style="display: block; margin: 0 auto;"  />
   <img src="https://prod-api.symphony.is/assets/og-image-5.webp" width="220" alt="NestJS Logo"  style="display: block; margin: 0 auto;"  />
