@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
 import { EventEmitter2 } from 'eventemitter2';
 import { v4 as uuid } from 'uuid';
 import { Employee } from './models/employee.model';
@@ -15,6 +15,14 @@ export class EmployeeService {
   constructor(private readonly eventEmitter: EventEmitter2) {}
 
   async createEmployee(dto: CreateEmployeeInput): Promise<Employee> {
+    const existingEmployee = this.employees.find(
+      (emp) => emp.email === dto.email && emp.name === dto.name,
+    );
+    if (existingEmployee) {
+      throw new BadRequestException(
+        `An employee with name "${dto.name}" and email "${dto.email}" already exists.`,
+      );
+    }
     const employee: Employee = {
       id: uuid(), // Generate a unique ID for the employee
       ...dto,

@@ -7,6 +7,7 @@ import { ExpressAdapter } from '@bull-board/express';
 import { getQueueToken } from '@nestjs/bull';
 import { QueueName } from './queue/queue.enum';
 import { Queue } from 'bull';
+import { ThrottlerModule, ThrottlerGuard } from '@nestjs/throttler';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -26,6 +27,7 @@ async function bootstrap() {
   });
 
   app.setGlobalPrefix('api');// Set global prefix for all REST routes
+  
 
   // Global validation pipe
   app.useGlobalPipes(
@@ -51,6 +53,10 @@ async function bootstrap() {
 
   app.use('/admin/queues', serverAdapter.getRouter());
 
+  app.use((req, res, next) => {
+    req.app.set('trust proxy', true);
+    next();
+  });
   await app.listen(3000);
   console.log(`Application is running on: http://localhost:3000`);
   console.log(`Bull Board is running on: http://localhost:3000/admin/queues`);
