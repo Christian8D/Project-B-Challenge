@@ -40,6 +40,29 @@
 - 💡 [Challenges and Observations](#challenges-and-observations)
 
 
+## Overview
+This project demonstrates how to combine REST and GraphQL endpoints in a NestJS application to manage employee data. It also provides a mail queue system for simulating email sends whenever an employee is created. The mail queue is powered by Bull and exposed via Bull Board for real-time job monitoring. Additionally, the EventEmitter library enables decoupling employee creation from email sending, providing a scalable and modular solution.
+
+## ⚙️ Tech Stack
+<br>
+🛠️ NestJS – Server-side Framwork
+<br>
+💻 TypeScript 
+<br>
+⏱️ Bull – Queue system
+<br>
+🎛️ Bull Board – A UI dashboard to manage Bull queues
+<br>
+📡 GraphQL – API endpoint for queries and mutations
+<br>
+🌐 REST – Traditional API endpoint structure
+<br>
+🛢️ Redis – Required by Bull for storing and retrieving job data
+
+<br>
+
+
+
 ## Installation & Setup
 
 
@@ -114,26 +137,6 @@ By default, the application runs at:
 Log messages will appear in your console as you use the API.
 
 
-## Overview
-This project demonstrates how to combine REST and GraphQL endpoints in a NestJS application to manage employee data. It also provides a mail queue system for simulating email sends whenever an employee is created. The mail queue is powered by Bull and exposed via Bull Board for real-time job monitoring. Additionally, the EventEmitter library enables decoupling employee creation from email sending, providing a scalable and modular solution.
-
-## ⚙️ Tech Stack
-<br>
-🛠️ NestJS – Server-side Framwork
-<br>
-💻 TypeScript 
-<br>
-⏱️ Bull – Queue system
-<br>
-🎛️ Bull Board – A UI dashboard to manage Bull queues
-<br>
-📡 GraphQL – API endpoint for queries and mutations
-<br>
-🌐 REST – Traditional API endpoint structure
-<br>
-🛢️ Redis – Required by Bull for storing and retrieving job data
-
-<br>
 
 ## Project Structure
 
