@@ -16,28 +16,28 @@
 **NestJS Employee Management & Mail Queue Demo**
 **A demo application built with NestJS showcasing:**
 
-1.- Employee Module – CRUD operations on employees (REST<code>.controller</code> & GraphQL<code>.resolver</code>)<br>
-2.- Email Service – Simulated email functionality using Bull for queueing jobs<br>
-3.- Queues & Asynchronous Processing – Usage of Bull for background processing, plus Bull Board for queue monitoring<br>
-4.- Event Emitter – Loose coupling of services to handle side effects<br>
-5.- GraphQL Playground – Built-in interactive explorer for GraphQL queries<br>
-5.- Bull Board – Built-in interactive explorer for Bull Queues<br>
+1.- 👥 Employee Module – CRUD operations on employees (REST<code>.controller</code> & GraphQL<code>.resolver</code>)<br>
+2.- ✉️ Email Service – Simulated email functionality using Bull for queueing jobs<br>
+3.- ⏱️ Queues & Asynchronous Processing – Usage of Bull for background processing, plus Bull Board for queue monitoring<br>
+4.- 📡 Event Emitter – Loose coupling of services to handle side effects<br>
+5.- 🛠️ GraphQL Playground – Built-in interactive explorer for GraphQL queries<br>
+5.- 🎛️ Bull Board – Built-in interactive explorer for Bull Queues<br>
 
 <br>
 
 
-## Table of Contents
+## 📚 Table of Contents
 
-- [Overview](#overview)
-- [Project Structure](#project-structure)
-- [Installation & Setup](#installation--setup)
-- [Running the Application](#running-the-application)
-- [Endpoints & Usage](#endpoints--usage)
-  - [REST Endpoints](#rest-endpoints)
-  - [GraphQL Endpoints](#graphql-endpoints)
-- [Queue Management](#queue-management)
-- [Event Emitter Flow](#event-emitter-flow)
-- [Challenges and Observations](#challenges-and-observations)
+- 📄 [Overview](#overview)
+- 📂 [Project Structure](#project-structure)
+- ⚙️ [Installation & Setup](#installation--setup)
+- 🚀 [Running the Application](#running-the-application)
+- 🌐 [Endpoints & Usage](#endpoints--usage)
+  - 🔗 [REST Endpoints](#rest-endpoints)
+  - 📜 [GraphQL Endpoints](#graphql-endpoints)
+- 📦 [Queue Management](#queue-management)
+- 🔔 [Event Emitter Flow](#event-emitter-flow)
+- 💡 [Challenges and Observations](#challenges-and-observations)
 
 ## Project setup
 
