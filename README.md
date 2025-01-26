@@ -310,5 +310,30 @@ mutation {
 
 
 
+## Event Emitter Flow
+**1.-Employee Created**
+
+<li> In <code>EmployeeService.createEmployee()</code>, once a new employee is saved in the in-memory array, an event <code>employee.created</code> is emitted.</li>
+<br>
+
+**2.-Mail Listener**
+
+<li>In MailListener, the @OnEvent('employee.created') decorator picks up this event and calls MailService.sendWelcomeEmail() asynchronously.</li>
+<br>
+
+**3.-Mail Service**
+
+<li>MailService enqueues a new job (sendWelcomeEmail) to the MAIL_QUEUE.</li>
+<br>
+
+**4.-Mail Processor**
+
+<li>MailProcessor listens for sendWelcomeEmail jobs in the queue. Once processed, it simulates an email send.</li>
+
+<p>
+This loosely coupled architecture means you can easily attach additional functionality whenever an employee is created—simply add new event listeners.
+</p>
+
+
 
 
