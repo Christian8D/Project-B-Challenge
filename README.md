@@ -309,6 +309,71 @@ This loosely coupled architecture means you can easily attach additional functio
 
 ## Challenges and Observations
 
-blabla
+One of the primary challenges in this project was ensuring that the queue execution followed the correct order and tracked the steps accurately. Proper order of execution is crucial for maintaining a reliable and predictable system, especially when dealing with asynchronous processes like queuing and event-driven workflows.
+
+<br>
+
+**Ensuring Queue Execution in the Right Order**
+
+To achieve reliable execution, the order of operations was meticulously designed and implemented. The integration of Bull Queue and EventEmitter ensured that each step in the process was decoupled and executed sequentially, with proper logging to track the workflow.
+
+The intended order of execution is as follows:
+
+<br>
+
+**1. Event Emission:** The <code>employee.created</code> event is emitted once the employee is successfully saved in memory:
+```bash
+[MailListener] Employee created event received: Christian Cosio
+```
+**2.Job Queuing:** Upon receiving the event, the <code>MailListener</code> triggers the <code>MailService</code> to queue the email task: 
+```bash
+[MailService] Queuing welcome email job for employee: Christian Cosio
+[MailService] Successfully queued email job for employee: Christian Cosio
+```
+**3.Job Processing:** The queued job is picked up by the <code>MailProcessor</code> for execution. This ensures the email is sent in an asynchronous and scalable manner:
+```bash
+[Bull Queue] Job #143 received for employee: Christian Cosio
+[MailProcessor] Processing email for: Christian Cosio
+```
+**4.Email Sending Simulation:** The <code>MailProcessor</code> simulates sending the email, logging the email details for verification:
+```bash
+[MailProcessor] After simulation Data Sent: {"from":"\"HR Dept\" <hr@example.com>","to":"hire@christianc.dev","subject":"Welcome to the Company","text":"Hello Christian Cosio, welcome to project b! Are you ready to unf*ck payroll?"}...
+```
+
+**5.Job Completion:** Finally, the queue marks the job as completed and logs the result:
+```batch
+[MailProcessor] Email (job #143) "sent" successfully to Christian Cosio
+[MailQueue] Job #143 completed. Result: {"success":true,"message":"Email sent successfully to hire@christianc.dev"}
+```
+
+**Key Techniques to Ensure Proper Order:**
+<br>
+
+<li> EventEmitter for Decoupling: </li>
+<br>
+<p>
+By integrating the EventEmitter library, the <code>EmployeeService</code> and <code>MailService</code> were decoupled, ensuring that the employee creation logic remains independent of the email-sending logic. This separation results in cleaner, more modular code and allows for easier maintenance and scalability.
+</p>
+
+<br>
+
+<li>Queue Tracking</li>
+<ul>Logging was added at each critical step:
+<li> When an event is emitted <code>(MailListener)</code>.</li>
+<li> When a job is added to the queue <code>(MailService)</code>.</li>
+<li> When the queue processes the job <code>(MailProcessor)</code>.</li>
+</ul>
+
+<br>
+
+<li>Error Handling and Retries:</li>
+<p>
+The queue configuration includes mechanisms to handle failures gracefully, such as retrying jobs with backoff and detailed logging for debugging.
+</p>
+
+<br>
+
+
+
 
 
