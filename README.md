@@ -79,19 +79,6 @@ cd Coding-Challenge-NestJS-Backend-with-Employee-Module-and-Email-Service
 npm install
 ```
 
-**3.🛢️ Install & run Redis:**
-Make sure you have a Redis instance running locally on localhost:6379.
-<br>
-<li> You can use Docker:</li>
-
-```bash
-docker run -d --name my-redis -p 6379:6379 redis
-```
-<li>Or install Redis locally (instructions).</li>
-<br>
-
-**4.- (Optional) Configure environment variables:**
-The default bull.config.ts points to localhost:6379. If needed, adjust Redis configurations there or via environment variables.
 
 ## Start Project
 
