@@ -92,7 +92,7 @@ This project demonstrates how to combine REST and GraphQL endpoints in a NestJS 
 
 <br>
 
-## 📂 Project Structure
+## Project Structure
 
 **A brief overview of the most important directories/files:**
 
@@ -124,7 +124,7 @@ This project demonstrates how to combine REST and GraphQL endpoints in a NestJS 
 
 ```
 
-## ⚙️ Installation & Setup
+## Installation & Setup
 **1.📥 Clone the repository or download the source code:**
 
 ```bash
@@ -152,7 +152,7 @@ docker run -d --name my-redis -p 6379:6379 redis
 **4.- (Optional) Configure environment variables:**
 The default bull.config.ts points to localhost:6379. If needed, adjust Redis configurations there or via environment variables.
 
-## 🚀 Running the Application
+## Running the Application
 To run the NestJS server in development mode:
 
 ```bash
@@ -171,8 +171,8 @@ Log messages will appear in your console as you use the API.
 
 
 
-## 🌐 Endpoints & Usage
-## 🔗 REST Endpoints
+## Endpoints & Usage
+## REST Endpoints
 <p>Global REST prefix is set to api, so endpoints are under <code>http://localhost:3000/api</code> </p>
 
 <ul>
@@ -231,7 +231,7 @@ curl http://localhost:3000/api/employees
 curl -X DELETE http://localhost:3000/api/employees/EMPLOYEE_ID
 ```
 
-## 📜 GraphQL Endpoints
+## GraphQL Endpoints
 ** The GraphQL endpoint is available at: **
 <br>
 <code>http://localhost:3000/graphql</code>
@@ -275,7 +275,7 @@ mutation {
 
 ```
 
-## 📦 Queue Management
+## Queue Management
 
 <p>This application uses Bull to queue email jobs and Bull Board to visualize them.</p>
 <br>
@@ -300,7 +300,7 @@ mutation {
 
 
 
-## 🔔 Event Emitter Flow
+## Event Emitter Flow
 **1.-Employee Created**
 
 <li> In <code>EmployeeService.createEmployee()</code>, once a new employee is saved in the in-memory array, an event <code>employee.created</code> is emitted.</li>
@@ -324,7 +324,7 @@ mutation {
 This loosely coupled architecture means you can easily attach additional functionality whenever an employee is created—simply add new event listeners.
 </p>
 
-## 💡 Challenges and Observations
+## Challenges and Observations
 
 blabla
 
