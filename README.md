@@ -39,6 +39,56 @@
 - 🔔 [Event Emitter Flow](#event-emitter-flow)
 - 💡 [Challenges and Observations](#challenges-and-observations)
 
+
+## Installation & Setup
+
+
+**1.📥 Clone the repository or download the source code:**
+
+```bash
+git clone https://github.com/Christian8D/Coding-Challenge-NestJS-Backend-with-Employee-Module-and-Email-Service.git
+
+```
+
+**2.📦 Install dependencies:**
+```bash
+cd Coding-Challenge-NestJS-Backend-with-Employee-Module-and-Email-Service
+npm install
+```
+
+**3.🛢️ Install & run Redis:**
+Make sure you have a Redis instance running locally on localhost:6379.
+<br>
+<li> You can use Docker:</li>
+
+```bash
+docker run -d --name my-redis -p 6379:6379 redis
+```
+<li>Or install Redis locally (instructions).</li>
+<br>
+
+**4.- (Optional) Configure environment variables:**
+The default bull.config.ts points to localhost:6379. If needed, adjust Redis configurations there or via environment variables.
+
+## Running the Application
+To run the NestJS server in development mode:
+
+```bash
+
+npm run start:dev
+```
+
+By default, the application runs at:
+
+<li> 🌐 REST & GraphQL: <code>http://localhost:3000</code>
+<li> 🎛️ Bull Board: <code>http://localhost:3000/admin/queues</code>
+<li> 📡 GraphQL Playground: <code>http://localhost:3000/graphql</code>
+<br>
+<br>
+Log messages will appear in your console as you use the API.
+
+
+
 ## Project setup
 
 ```bash
@@ -123,51 +173,6 @@ This project demonstrates how to combine REST and GraphQL endpoints in a NestJS 
 └── README.md                  # Documentation
 
 ```
-
-## Installation & Setup
-**1.📥 Clone the repository or download the source code:**
-
-```bash
-git clone https://github.com/Christian8D/Coding-Challenge-NestJS-Backend-with-Employee-Module-and-Email-Service.git
-
-```
-
-**2.📦 Install dependencies:**
-```bash
-cd Coding-Challenge-NestJS-Backend-with-Employee-Module-and-Email-Service
-npm install
-```
-
-**3.🛢️ Install & run Redis:**
-Make sure you have a Redis instance running locally on localhost:6379.
-<br>
-<li> You can use Docker:</li>
-
-```bash
-docker run -d --name my-redis -p 6379:6379 redis
-```
-<li>Or install Redis locally (instructions).</li>
-<br>
-
-**4.- (Optional) Configure environment variables:**
-The default bull.config.ts points to localhost:6379. If needed, adjust Redis configurations there or via environment variables.
-
-## Running the Application
-To run the NestJS server in development mode:
-
-```bash
-
-npm run start:dev
-```
-
-By default, the application runs at:
-
-<li> 🌐 REST & GraphQL: <code>http://localhost:3000</code>
-<li> 🎛️ Bull Board: <code>http://localhost:3000/admin/queues</code>
-<li> 📡 GraphQL Playground: <code>http://localhost:3000/graphql</code>
-<br>
-<br>
-Log messages will appear in your console as you use the API.
 
 
 
