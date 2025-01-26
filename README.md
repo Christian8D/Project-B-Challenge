@@ -71,28 +71,28 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Overview
+## 📄 Overview
 This project demonstrates how to combine REST and GraphQL endpoints in a NestJS application to manage employee data. It also provides a mail queue system for simulating email sends whenever an employee is created. The mail queue is powered by Bull and exposed via Bull Board for real-time job monitoring. Additionally, the EventEmitter library enables decoupling employee creation from email sending, providing a scalable and modular solution.
 
-##Tech Stack
+## ⚙️ Tech Stack
 <br>
-NestJS – Server-side Framwork
+🛠️ NestJS – Server-side Framwork
 <br>
-TypeScript 
+💻 TypeScript 
 <br>
-Bull – Queue system
+⏱️ Bull – Queue system
 <br>
-Bull Board – A UI dashboard to manage Bull queues
+🎛️ Bull Board – A UI dashboard to manage Bull queues
 <br>
-GraphQL – API endpoint for queries and mutations
+📡 GraphQL – API endpoint for queries and mutations
 <br>
-REST – Traditional API endpoint structure
+🌐 REST – Traditional API endpoint structure
 <br>
-Redis – Required by Bull for storing and retrieving job data
+🛢️ Redis – Required by Bull for storing and retrieving job data
 
 <br>
 
-## Project Structure
+## 📂 Project Structure
 
 **A brief overview of the most important directories/files:**
 
@@ -124,21 +124,21 @@ Redis – Required by Bull for storing and retrieving job data
 
 ```
 
-## Installation & Setup
-**1.-Clone the repository or download the source code:**
+## ⚙️ Installation & Setup
+**1.📥 Clone the repository or download the source code:**
 
 ```bash
 git clone https://github.com/Christian8D/Coding-Challenge-NestJS-Backend-with-Employee-Module-and-Email-Service.git
 
 ```
 
-**2.- Install dependencies:**
+**2.📦 Install dependencies:**
 ```bash
 cd Coding-Challenge-NestJS-Backend-with-Employee-Module-and-Email-Service
 npm install
 ```
 
-**3.- Install & run Redis:**
+**3.🛢️ Install & run Redis:**
 Make sure you have a Redis instance running locally on localhost:6379.
 <br>
 <li> You can use Docker:</li>
@@ -152,7 +152,7 @@ docker run -d --name my-redis -p 6379:6379 redis
 **4.- (Optional) Configure environment variables:**
 The default bull.config.ts points to localhost:6379. If needed, adjust Redis configurations there or via environment variables.
 
-## Running the Application
+## 🚀 Running the Application
 To run the NestJS server in development mode:
 
 ```bash
@@ -162,17 +162,17 @@ npm run start:dev
 
 By default, the application runs at:
 
-<li>REST & GraphQL: <code>http://localhost:3000</code>
-<li>Bull Board: <code>http://localhost:3000/admin/queues</code>
-<li>GraphQL Playground: <code>http://localhost:3000/graphql</code>
+<li> 🌐 REST & GraphQL: <code>http://localhost:3000</code>
+<li> 🎛️ Bull Board: <code>http://localhost:3000/admin/queues</code>
+<li> 📡 GraphQL Playground: <code>http://localhost:3000/graphql</code>
 <br>
 <br>
 Log messages will appear in your console as you use the API.
 
 
 
-## Endpoints & Usage
-## REST Endpoints
+## 🌐 Endpoints & Usage
+## 🔗 REST Endpoints
 <p>Global REST prefix is set to api, so endpoints are under <code>http://localhost:3000/api</code> </p>
 
 <ul>
@@ -231,7 +231,7 @@ curl http://localhost:3000/api/employees
 curl -X DELETE http://localhost:3000/api/employees/EMPLOYEE_ID
 ```
 
-## GraphQL Endpoints
+## 📜 GraphQL Endpoints
 ** The GraphQL endpoint is available at: **
 <br>
 <code>http://localhost:3000/graphql</code>
@@ -275,7 +275,7 @@ mutation {
 
 ```
 
-## Queue Management
+## 📦 Queue Management
 
 <p>This application uses Bull to queue email jobs and Bull Board to visualize them.</p>
 <br>
@@ -300,7 +300,7 @@ mutation {
 
 
 
-## Event Emitter Flow
+## 🔔 Event Emitter Flow
 **1.-Employee Created**
 
 <li> In <code>EmployeeService.createEmployee()</code>, once a new employee is saved in the in-memory array, an event <code>employee.created</code> is emitted.</li>
@@ -324,7 +324,7 @@ mutation {
 This loosely coupled architecture means you can easily attach additional functionality whenever an employee is created—simply add new event listeners.
 </p>
 
-## Challenges and Observations
+## 💡 Challenges and Observations
 
 blabla
 
