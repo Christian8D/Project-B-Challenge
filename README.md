@@ -182,6 +182,7 @@ curl http://localhost:3000/api/employees/EMPLOYEE_ID
 ```
 
 <br>
+
 **Get all Employees**
 <li>Endpoint: <code>GET /api/employees</code></li>
 <li>Example:</li>
