@@ -128,13 +128,13 @@ Redis – Required by Bull for storing and retrieving job data
 **1.-Clone the repository or download the source code:**
 
 ```bash
-git clone https://github.com/your-username/nestjs-employee-demo.git
+git clone https://github.com/Christian8D/Coding-Challenge-NestJS-Backend-with-Employee-Module-and-Email-Service.git
 
 ```
 
 **2.- Install dependencies:**
 ```bash
-cd nestjs-employee-demo
+cd Coding-Challenge-NestJS-Backend-with-Employee-Module-and-Email-Service
 npm install
 ```
 
