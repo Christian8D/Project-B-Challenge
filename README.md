@@ -232,6 +232,10 @@ curl http://localhost:3000/api/employees
 
 ```
 
+<br>
+**Delete an Employees**
+<li>DELETE /api/employees/:id 🚯</li>
+<li>Example:</li>
 
 
 
