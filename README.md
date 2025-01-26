@@ -29,8 +29,6 @@
 
 - [Overview](#overview)
 
-<br>
-
 - [Project Structure](#project-structure)
 
 <br>
