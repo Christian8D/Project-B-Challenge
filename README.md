@@ -194,7 +194,7 @@ curl http://localhost:3000/api/employees
 
 <br>
 **Update an Employees**
-<li>Endpoint: <code>GET /api/employees/:id</code> :accessibility:</li>
+<li>Endpoint: <code>PATCH /api/employees/:id</code> :accessibility:</li>
 <li>Body: Partial fields you want to update. For example:</li>
 
 ```bash
