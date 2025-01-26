@@ -1,4 +1,4 @@
-
+'
 <div align="center"style="text-align: center;">
   <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="NestJS Logo"  style="display: block; margin: 0 auto;"  />
   <img src="https://prod-api.symphony.is/assets/og-image-5.webp" width="220" alt="NestJS Logo"  style="display: block; margin: 0 auto;"  />
@@ -373,7 +373,19 @@ The queue configuration includes mechanisms to handle failures gracefully, such 
 
 <br>
 
+**Observations and Outcomes:**
+<li>Reliability:</li>
+<p>The queue executes tasks in a predictable, first-in-first-out (FIFO) order, ensuring that no email task is missed or executed out of sequence.</p>
 
+<li>Scalability:</li>
+<p>The decoupled architecture allows for future enhancements, such as adding new events or extending the email-sending functionality to support additional notification types.</p>
+
+<li>Code Cleanliness:</li>
+<p>The use of EventEmitter reduced tight coupling between modules, resulting in a cleaner and more maintainable codebase.</p>
+
+<br>
+
+<p>By carefully designing and implementing the order of execution, the system now provides a robust and scalable solution for handling asynchronous tasks like email sending, ensuring accuracy and reliability at every step.</p>
 
 
 
