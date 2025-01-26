@@ -13,10 +13,10 @@
 
 ## Description
 
-##NestJS Employee Management & Mail Queue Demo
+**NestJS Employee Management & Mail Queue Demo**
 **A demo application built with NestJS showcasing:**
 
-1.- Employee Module – CRUD operations on employees (REST & GraphQL)<br>
+1.- Employee Module – CRUD operations on employees (REST<code>.controller</code> & GraphQL<code>.resolver</code>)<br>
 2.- Email Service – Simulated email functionality using Bull for queueing jobs<br>
 3.- Queues & Asynchronous Processing – Usage of Bull for background processing, plus Bull Board for queue monitoring<br>
 4.- Event Emitter – Loose coupling of services to handle side effects<br>
@@ -24,9 +24,11 @@
 5.- Bull Board – Built-in interactive explorer for Bull Queues<br>
 
 <br>
+
 ##Table of Contents
-<br>
-**Overview**
+
+- [Overview](#overview)
+
 <br>
 - Project Structure
 <br>
@@ -81,7 +83,7 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-##Overview
+## Overview
 This project demonstrates how to combine REST and GraphQL endpoints in a NestJS application to manage employee data. It also provides a mail queue system for simulating email sends whenever an employee is created. The mail queue is powered by Bull and exposed via Bull Board for real-time job monitoring. Additionally, the EventEmitter library allows decoupling employee creation from email sending.
 
 ##Tech Stack
@@ -172,9 +174,9 @@ npm run start:dev
 
 By default, the application runs at:
 
-<li>REST & GraphQL: http://localhost:3000
-<li>Bull Board: http://localhost:3000/admin/queues
-<li>GraphQL Playground: http://localhost:3000/graphql
+<li>REST & GraphQL: <code>http://localhost:3000</code>
+<li>Bull Board: <code>http://localhost:3000/admin/queues</code>
+<li>GraphQL Playground: <code>http://localhost:3000/graphql</code>
 <br>
 <br>
 Log messages will appear in your console as you use the API.
@@ -183,10 +185,10 @@ Log messages will appear in your console as you use the API.
 
 ## Endpoints & Usage
 **GrapQL:**
-<p>Global REST prefix is set to api, so endpoints are under http://localhost:3000/api </p>
+<p>Global REST prefix is set to api, so endpoints are under <code>http://localhost:3000/api</code> </p>
 
 <ul>
-  <li>Endpoint: POST /api/employees</li>
+  <li>Endpoint: <code>POST /api/employees</code></li>
 </ul>
 
 **REST:**
@@ -201,7 +203,7 @@ Log messages will appear in your console as you use the API.
 ```
 <br>
 **Get an Employee by ID**
-<li>Endpoint: GET /api/employees/:id :accessibility:</li>
+<li>Endpoint: <code>GET /api/employees/:id</code> :accessibility:</li>
 <li>Example:</li>
 
 
@@ -211,7 +213,7 @@ curl http://localhost:3000/api/employees/EMPLOYEE_ID
 
 <br>
 **Get all Employees**
-<li>Endpoint: GET /api/employees</li>
+<li>Endpoint: <code>GET /api/employees</code></li>
 <li>Example:</li>
 
 ```bash
@@ -221,7 +223,7 @@ curl http://localhost:3000/api/employees
 
 <br>
 **Update an Employees**
-<li>Endpoint: GET /api/employees/:id :accessibility:</li>
+<li>Endpoint: <code>GET /api/employees/:id</code> :accessibility:</li>
 <li>Body: Partial fields you want to update. For example:</li>
 
 ```bash
@@ -234,7 +236,7 @@ curl http://localhost:3000/api/employees
 
 <br>
 **Delete an Employees**
-<li>DELETE /api/employees/:id 🚯</li>
+<li><code>DELETE /api/employees/:id</code> 🚯</li>
 <li>Example:</li>
 
 ```bash
@@ -244,7 +246,7 @@ curl -X DELETE http://localhost:3000/api/employees/EMPLOYEE_ID
 ## GraphQL Endpoints
 ** The GraphQL endpoint is available at: **
 <br>
-http://localhost:3000/graphql
+<code>http://localhost:3000/graphql</code>
 <br>
 Open it in your browser to access the GraphQL Playground. You can write queries or mutations to manage Employee data.
 
@@ -292,18 +294,18 @@ mutation {
 
 **1.-Queue Setup**
 
-<li>Defined in bull.config.ts, connecting to Redis (default: localhost:6379).</li>
-<li>A single queue is registered named MAIL_QUEUE (see QueueName enum).</li>
+<li>Defined in bull.config.ts, connecting to Redis (<code>default: localhost:6379</code>).</li>
+<li>A single queue is registered named <code>MAIL_QUEUE</code> (see QueueName enum).</li>
 <br>
 
 **2.-Queue Processing**
-<li>Implemented by MailProcessor in mail.processor.ts.</li>
-<li>When an employee.created event is emitted, a background job (sendWelcomeEmail) is added to the queue.</li>
+<li>Implemented by <code>MailProcessor</code> in <code>mail.processor.ts</code>.</li>
+<li>When an employee.created event is emitted, a background job (<code>sendWelcomeEmail</code>) is added to the queue.</li>
 <li>The queue processor simulates sending an email by logging details to the console.</li>
 <br>
 
 3.-Bull Board 
-<ul>Access the dashboard at http://localhost:3000/admin/queues to monitor or manage queued jobs:</ul>
+<ul>Access the dashboard at <code>http://localhost:3000/admin/queues</code> to monitor or manage queued jobs:</ul>
 <li>Active – Jobs currently processing.</li>
 <li>Completed – Successfully processed jobs.</li>
 <li>Failed – Jobs that encountered errors.</li>
@@ -318,17 +320,17 @@ mutation {
 
 **2.-Mail Listener**
 
-<li>In MailListener, the @OnEvent('employee.created') decorator picks up this event and calls MailService.sendWelcomeEmail() asynchronously.</li>
+<li>In <code>MailListener</code>, the <code>@OnEvent('employee.created')</code> decorator picks up this event and calls <code>MailService.sendWelcomeEmail()</code> asynchronously.</li>
 <br>
 
 **3.-Mail Service**
 
-<li>MailService enqueues a new job (sendWelcomeEmail) to the MAIL_QUEUE.</li>
+<li><code>MailService</code> enqueues a new job (<code>sendWelcomeEmail</code>) to the <code>MAIL_QUEUE</code>.</li>
 <br>
 
 **4.-Mail Processor**
 
-<li>MailProcessor listens for sendWelcomeEmail jobs in the queue. Once processed, it simulates an email send.</li>
+<li><code>MailProcessor</code> listens for <code>sendWelcomeEmail</code> jobs in the queue. Once processed, it simulates an email send.</li>
 
 <p>
 This loosely coupled architecture means you can easily attach additional functionality whenever an employee is created—simply add new event listeners.
