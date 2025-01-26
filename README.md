@@ -237,9 +237,34 @@ curl http://localhost:3000/api/employees
 <li>DELETE /api/employees/:id 🚯</li>
 <li>Example:</li>
 
+```bash
+curl -X DELETE http://localhost:3000/api/employees/EMPLOYEE_ID
+```
+
+## GraphQL Endpoints
+** The GraphQL endpoint is available at: **
+<br>
+http://localhost:3000/graphql
+<br>
+Open it in your browser to access the GraphQL Playground. You can write queries or mutations to manage Employee data.
+
+**Sample GraphQL Query**
+```bash
+
+query{
+  employees{
+    id
+    name
+    email
+    jobTitle
+    department
+  }
+}
+
+```
 
 
-GrapQL
+**Sample GraphQL Mutation**
 ```bash
 mutation {
   createEmployee(
@@ -260,7 +285,28 @@ mutation {
 
 ```
 
+## Queue Managment 
 
+<p>This application uses Bull to queue email jobs and Bull Board to visualize them.</p>
+<br>
+
+**1.-Queue Setup**
+
+<li>Defined in bull.config.ts, connecting to Redis (default: localhost:6379).</li>
+<li>A single queue is registered named MAIL_QUEUE (see QueueName enum).</li>
+<br>
+
+**2.-Queue Processing**
+<li>Implemented by MailProcessor in mail.processor.ts.</li>
+<li>When an employee.created event is emitted, a background job (sendWelcomeEmail) is added to the queue.</li>
+<li>The queue processor simulates sending an email by logging details to the console.</li>
+<br>
+
+3.-Bull Board 
+<ul>Access the dashboard at http://localhost:3000/admin/queues to monitor or manage queued jobs:</ul>
+<li>Active – Jobs currently processing.</li>
+<li>Completed – Successfully processed jobs.</li>
+<li>Failed – Jobs that encountered errors.</li>
 
 
 
