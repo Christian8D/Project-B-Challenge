@@ -102,7 +102,8 @@ Redis – Required by Bull for storing and retrieving job data
 
 <br>
 
-##Project Structure
+## Project Structure
+
 **A brief overview of the most important directories/files:**
 
 ```bash
@@ -132,4 +133,122 @@ Redis – Required by Bull for storing and retrieving job data
 └── README.md                  # Documentation
 
 ```
+
+## Installation & Setup
+**1.-Clone the repository or download the source code:**
+
+```bash
+git clone https://github.com/your-username/nestjs-employee-demo.git
+
+```
+
+**2.- Install dependencies:**
+```bash
+cd nestjs-employee-demo
+npm install
+```
+
+**3.- Install & run Redis:**
+Make sure you have a Redis instance running locally on localhost:6379.
+<br>
+<li> You can use Docker:</li>
+
+```bash
+docker run -d --name my-redis -p 6379:6379 redis
+```
+<li>Or install Redis locally (instructions).</li>
+<br>
+
+**4.- (Optional) Configure environment variables:**
+The default bull.config.ts points to localhost:6379. If needed, adjust Redis configurations there or via environment variables.
+
+## Running the Application
+To run the NestJS server in development mode:
+
+```bash
+
+npm run start:dev
+```
+
+By default, the application runs at:
+
+<li>REST & GraphQL: http://localhost:3000
+<li>Bull Board: http://localhost:3000/admin/queues
+<li>GraphQL Playground: http://localhost:3000/graphql
+<br>
+<br>
+Log messages will appear in your console as you use the API.
+
+
+
+## Endpoints & Usage
+**GrapQL:**
+<p>Global REST prefix is set to api, so endpoints are under http://localhost:3000/api </p>
+
+<ul>
+  <li>Endpoint: POST /api/employees</li>
+</ul>
+
+**REST:**
+```bash
+{
+  name: "Christian Cosio",
+  email: "hire@ChristianC.dev",
+  "jobTitle": "Software Engineer",
+  "department": "IT"
+}
+
+```
+<br>
+**Get an Employee by ID**
+<li>Endpoint: GET /api/employees/:id</li>
+<li>Example:</li>
+
+
+```bash
+curl http://localhost:3000/api/employees/EMPLOYEE_ID
+```
+
+<br>
+**Get all Employees**
+<li>Endpoint: GET /api/employees</li>
+<li>Example:</li>
+
+```bash
+curl http://localhost:3000/api/employees
+
+```
+
+
+
+
+
+
+
+GrapQL
+```bash
+mutation {
+  createEmployee(
+    input: {
+      name: "Christian Cosio"
+      email: "hire@ChristianC.dev"
+      jobTitle: "Software Engineer"
+      department: "IT"
+    }
+  ) {
+    id
+    name
+    email
+    jobTitle
+    department
+  }
+}
+
+```
+
+
+
+
+
+
 
