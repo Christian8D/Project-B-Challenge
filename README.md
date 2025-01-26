@@ -45,7 +45,7 @@ This project demonstrates how to combine REST and GraphQL endpoints in a NestJS 
 
 ## ⚙️ Tech Stack
 <br>
-🛠️ NestJS – Server-side Framwork
+🛠️ NestJS – Server-side FrameworkFramwork
 <br>
 💻 TypeScript 
 <br>
