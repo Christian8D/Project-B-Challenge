@@ -70,25 +70,6 @@ docker run -d --name my-redis -p 6379:6379 redis
 **4.- (Optional) Configure environment variables:**
 The default bull.config.ts points to localhost:6379. If needed, adjust Redis configurations there or via environment variables.
 
-## Running the Application
-To run the NestJS server in development mode:
-
-```bash
-
-npm run start:dev
-```
-
-By default, the application runs at:
-
-<li> 🌐 REST & GraphQL: <code>http://localhost:3000</code>
-<li> 🎛️ Bull Board: <code>http://localhost:3000/admin/queues</code>
-<li> 📡 GraphQL Playground: <code>http://localhost:3000/graphql</code>
-<br>
-<br>
-Log messages will appear in your console as you use the API.
-
-
-
 ## Project setup
 
 ```bash
@@ -120,6 +101,24 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+## Running the Application
+To run the NestJS server in development mode:
+
+```bash
+
+npm run start:dev
+```
+
+By default, the application runs at:
+
+<li> 🌐 REST & GraphQL: <code>http://localhost:3000</code>
+<li> 🎛️ Bull Board: <code>http://localhost:3000/admin/queues</code>
+<li> 📡 GraphQL Playground: <code>http://localhost:3000/graphql</code>
+<br>
+<br>
+Log messages will appear in your console as you use the API.
+
 
 ## Overview
 This project demonstrates how to combine REST and GraphQL endpoints in a NestJS application to manage employee data. It also provides a mail queue system for simulating email sends whenever an employee is created. The mail queue is powered by Bull and exposed via Bull Board for real-time job monitoring. Additionally, the EventEmitter library enables decoupling employee creation from email sending, providing a scalable and modular solution.
