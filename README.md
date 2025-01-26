@@ -21,7 +21,7 @@
 3.- ⏱️ Queues & Asynchronous Processing – Usage of Bull for background processing, plus Bull Board for queue monitoring<br>
 4.- 📡 Event Emitter – Loose coupling of services to handle side effects<br>
 5.- 🛠️ GraphQL Playground – Built-in interactive explorer for GraphQL queries<br>
-5.- 🎛️ Bull Board – Built-in interactive explorer for Bull Queues<br>
+6.- 🎛️ Bull Board – Built-in interactive explorer for Bull Queues<br>
 
 <br>
 
