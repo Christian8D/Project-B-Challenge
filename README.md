@@ -69,13 +69,13 @@ This project demonstrates how to combine REST and GraphQL endpoints in a NestJS 
 **1.📥 Clone the repository or download the source code:**
 
 ```bash
-git clone https://github.com/Christian8D/Coding-Challenge-NestJS-Backend-with-Employee-Module-and-Email-Service.git
+git clone https://github.com/Christian8D/Project-B-Challenge.git
 
 ```
 
 **2.📦 Install dependencies:**
 ```bash
-cd Coding-Challenge-NestJS-Backend-with-Employee-Module-and-Email-Service
+cd Project-B-Challenge
 npm install
 ```
 
