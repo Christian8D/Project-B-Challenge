@@ -8,6 +8,8 @@ import * as nodemailer from 'nodemailer';
 export class MailProcessor {
   @Process('sendWelcomeEmail')
   async handleSendWelcomeEmail(job: Job) {
+    console.log(`[Bull Queue] Job #${job.id} received for employee: ${job.data.employee.name}`);
+    
     const { employee } = job.data;
 
     console.log(`[MailProcessor] Processing job #${job.id} for ${employee.name}`);
