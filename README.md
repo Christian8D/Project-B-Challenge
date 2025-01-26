@@ -275,7 +275,7 @@ mutation {
 
 ```
 
-## Queue Managment 
+## Queue Management
 
 <p>This application uses Bull to queue email jobs and Bull Board to visualize them.</p>
 <br>
