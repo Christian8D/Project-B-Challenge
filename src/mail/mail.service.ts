@@ -33,7 +33,7 @@ export class MailService {
           backoff: 5000, // Delay for 5 seconds
           removeOnComplete: true, // Remove the job from the queue when completed
           removeOnFail: false, // Do not remove the job from the queue when failed
-          delay: 5000, // 5 seconds
+          delay: 5000, // 5 seconds to simulate processing time
         },
       )
       this.logger.log(
