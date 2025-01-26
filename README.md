@@ -81,15 +81,54 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Deployment
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+##Overview
+This project demonstrates how to combine REST and GraphQL endpoints in a NestJS application to manage employee data. It also provides a mail queue system for simulating email sends whenever an employee is created. The mail queue is powered by Bull and exposed via Bull Board for real-time job monitoring. Additionally, the EventEmitter library allows decoupling employee creation from email sending.
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+##Tech Stack
+<br>
+NestJS – Server-side Framwork
+<br>
+TypeScript 
+<br>
+Bull – Queue system
+<br>
+Bull Board – A UI dashboard to manage Bull queues
+<br>
+GraphQL – API endpoint for queries and mutations
+<br>
+REST – Traditional API endpoint structure
+<br>
+Redis – Required by Bull for storing and retrieving job data
+
+<br>
+
+##
 
 ```bash
-$ npm install -g mau
-$ mau deploy
-```
+.
+├── src
+│   ├── app.module.ts          # Root application module
+│   ├── main.ts                # Application entry point
+│   ├── employee
+│   │   ├── employee.module.ts
+│   │   ├── employee.service.ts
+│   │   ├── employee.controller.ts  # REST Endpoint
+│   │   ├── employee.resolver.ts    # GraphQL Endpoint
+│   │   ├── dtos
+│   │   │   └── create-employee.input.ts
+│   │   └── models
+│   │       └── employee.model.ts
+│   ├── mail
+│   │   ├── mail.module.ts
+│   │   ├── mail.service.ts
+│   │   ├── mail.processor.ts
+│   │   └── mail.listener.ts
+│   ├── queue
+│   │   ├── bull.config.ts
+│   │   └── queue.enum.ts
+│   └── logger.middleware.ts
+├── package.json
+└── README.md                  # Documentation
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+```
 
