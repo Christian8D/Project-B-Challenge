@@ -120,12 +120,6 @@ $ npm run test:cov
 ```
 
 ## Running the Application
-To run the NestJS server in development mode:
-
-```bash
-
-npm run start:dev
-```
 
 By default, the application runs at:
 
