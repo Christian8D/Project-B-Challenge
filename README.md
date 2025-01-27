@@ -29,6 +29,7 @@
 ## 📚 Table of Contents
 
 - 📄 [Overview](#overview)
+- 🎥 [Video Walkthrough](#video-walkthrough)
 - ⚙️ [Installation & Setup](#installation--setup)
 - 🌐 [Endpoints & Usage](#endpoints--usage)
   - 🔗 [REST Endpoints](#rest-endpoints)
@@ -41,6 +42,26 @@
 
 ## Overview
 This project demonstrates how to combine REST and GraphQL endpoints in a NestJS application to manage employee data. It also provides a mail queue system for simulating email sends whenever an employee is created. The mail queue is powered by Bull and exposed via Bull Board for real-time job monitoring. Additionally, the EventEmitter library enables decoupling employee creation from email sending, providing a scalable and modular solution.
+
+<br>
+
+## Video Walkthrough
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=wKzyk-CRzZ0" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.youtube.com/vi/wKzyk-CRzZ0/0.jpg" alt="Project B Walkthrough" width="560">
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
 
 ## ⚙️ Tech Stack
 <br>
