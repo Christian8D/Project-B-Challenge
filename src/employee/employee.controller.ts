@@ -22,30 +22,30 @@ import {
   // Controller
   // @SkipThrottle()
   @Controller('employees')
-  export class EmployeeController {
+   export class EmployeeController {
     constructor(private readonly employeeService: EmployeeService) {}
   
     @Post()
     // @Throttle({write: {ttl: 1000, limit: 5}})
-    createEmployee(@Body() dto: CreateEmployeeInput): Promise<Employee> {
+    async createEmployee(@Body() dto: CreateEmployeeInput): Promise<Employee> {
       return this.employeeService.createEmployee(dto);
     }
   
     @Get(':id')
     // @Throttle({read: {ttl: 1000, limit: 10}})
-    getEmployee(@Param('id') id: string): Promise<Employee> {
+   async getEmployee(@Param('id') id: string): Promise<Employee> {
       return this.employeeService.getEmployeeById(id);
     }
   
     @Get()
     // @Throttle({read: {ttl: 1000, limit: 10}})
-    getEmployees(): Promise<Employee[]> {
+    async getEmployees(): Promise<Employee[]> {
       return this.employeeService.getAllEmployees();
     }
   
     @Patch(':id')
     // @Throttle({write: {ttl: 1000, limit: 5}})
-    updateEmployee(
+    async updateEmployee(
       @Param('id') id: string,
       @Body() dto: UpdateEmployeeInput,
     ): Promise<Employee> {
@@ -53,7 +53,7 @@ import {
     }
   
     @Delete(':id')
-    deleteEmployee(@Param('id') id: string): Promise<void> {
+   async deleteEmployee(@Param('id') id: string): Promise<void> {
       return this.employeeService.deleteEmployee(id);
     }
   }
