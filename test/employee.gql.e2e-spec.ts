@@ -29,10 +29,10 @@ describe('EmployeeResolver (e2e) - GraphQL', () => {
     const createMutation = `
       mutation {
         createEmployee(dto: {
-          name: "Jane Doe"
-          email: "jane@example.com"
-          jobTitle: "QA Engineer"
-          department: "Quality"
+          name: "Christian Cosio"
+          email: "Hire@ChristianC.dev"
+          jobTitle: "Software Engineer"
+          department: "IT"
         }) {
           id
           name
@@ -49,7 +49,7 @@ describe('EmployeeResolver (e2e) - GraphQL', () => {
 
     const { data } = response.body;
     expect(data.createEmployee).toHaveProperty('id');
-    expect(data.createEmployee.name).toBe('Jane Doe');
+    expect(data.createEmployee.name).toBe('Christian Cosio');
     createdEmployeeId = data.createEmployee.id;
   });
 
