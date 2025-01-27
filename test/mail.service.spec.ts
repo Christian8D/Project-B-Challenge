@@ -36,9 +36,9 @@ describe('MailService', () => {
   it('should add a sendWelcomeEmail job to the queue', async () => {
     const employee: Employee = {
       id: '123',
-      name: 'John Doe',
-      email: 'john@example.com',
-      jobTitle: 'Developer',
+      name: 'Christian Cosio',
+      email: 'Hire@ChristianC.dev',
+      jobTitle: 'Software Engineer',
       department: 'IT',
     };
 
