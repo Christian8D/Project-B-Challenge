@@ -4,16 +4,11 @@
   <img src="https://prod-api.symphony.is/assets/og-image-5.webp" width="220" alt="NestJS Logo"  style="display: block; margin: 0 auto;"  />
 </div>
 
-<p align="center">
-  <a href="http://www.christianc.dev" target="blank"><img src="https://christianc.dev/wp-content/uploads/2025/01/Screenshot-2025-01-25-at-19.18.29.png"  /></a>
-</p>
-
 
 
 
 ## Description
 
-**Project B Challenge**
 
 **NestJS Employee Management & Mail Queue Demo**
 **A demo application built with NestJS showcasing:**
