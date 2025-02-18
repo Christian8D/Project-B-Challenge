@@ -47,13 +47,7 @@ This project demonstrates how to combine REST and GraphQL endpoints in a NestJS 
 
 <br>
 
-## Video Walkthrough
 
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=wKzyk-CRzZ0" target="_blank" rel="noopener noreferrer">
-    <img src="https://img.youtube.com/vi/wKzyk-CRzZ0/0.jpg" alt="Project B Walkthrough" width="560">
-  </a>
-</p>
 
 
 
