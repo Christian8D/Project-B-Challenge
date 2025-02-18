@@ -13,6 +13,8 @@
 
 ## Description
 
+**Project B Challenge**
+
 **NestJS Employee Management & Mail Queue Demo**
 **A demo application built with NestJS showcasing:**
 
